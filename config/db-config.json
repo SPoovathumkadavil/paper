@@ -1,0 +1,95 @@
+{
+  "tables": {
+    "papers": {
+      "title": "TEXT",
+      "authors": "TEXT",
+      "abstract": "TEXT",
+      "keywords": "TEXT",
+      "url": "TEXT",
+      "date": "TEXT",
+      "subject": "TEXT"
+    },
+    "novels": {
+      "title": "TEXT",
+      "authors": "TEXT",
+      "abstract": "TEXT",
+      "keywords": "TEXT",
+      "url": "TEXT",
+      "date": "TEXT",
+      "subject": "TEXT"
+    },
+    "notes": {
+      "title": "TEXT",
+      "abstract": "TEXT",
+      "keywords": "TEXT",
+      "url": "TEXT",
+      "date": "TEXT",
+      "subject": "TEXT"
+    },
+    "authors": {
+      "name": "TEXT"
+    },
+    "keywords": {
+      "keyword": "TEXT"
+    },
+    "subjects": {
+      "subject": "TEXT"
+    }
+  },
+  "relations": {
+    "papers": [
+      {
+        "table": "papers",
+        "column": "authors",
+        "ref_table": "authors",
+        "ref_column": "name"
+      },
+      {
+        "table": "papers",
+        "column": "keywords",
+        "ref_table": "keywords",
+        "ref_column": "keyword"
+      },
+      {
+        "table": "papers",
+        "column": "subject",
+        "ref_table": "subjects",
+        "ref_column": "subject"
+      }
+    ],
+    "novels": [
+      {
+        "table": "novels",
+        "column": "authors",
+        "ref_table": "authors",
+        "ref_column": "name"
+      },
+      {
+        "table": "novels",
+        "column": "keywords",
+        "ref_table": "keywords",
+        "ref_column": "keyword"
+      },
+      {
+        "table": "novels",
+        "column": "subject",
+        "ref_table": "subjects",
+        "ref_column": "subject"
+      }
+    ],
+    "notes": [
+      {
+        "table": "notes",
+        "column": "keywords",
+        "ref_table": "keywords",
+        "ref_column": "keyword"
+      },
+      {
+        "table": "notes",
+        "column": "subject",
+        "ref_table": "subjects",
+        "ref_column": "subject"
+      }
+    ]
+  }
+}

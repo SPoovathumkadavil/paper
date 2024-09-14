@@ -14,7 +14,7 @@ BIN_DIR = bin
 LIB_DIR = library
 CONF_DIR = config
 
-APP = papier
+APP = paper
 
 # if install or uninstall is called, check if the directories exist
 ifneq ($(filter install uninstall, $(MAKECMDGOALS)),)
